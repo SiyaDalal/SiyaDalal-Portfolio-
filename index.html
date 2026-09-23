@@ -1,253 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Siya Dalal | Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siya Dalal | Portfolio</title>
+<meta name="description" content="Portfolio of Siya Dalal, Computer Engineering student and web developer.">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="nav"><div class="wrap nav-in">
+  <a href="#home" class="logo">Siya<span>.</span></a>
+  <nav id="menu">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a>
+    <a href="#projects">Projects</a><a href="#resume">Resume</a><a href="#contact">Contact</a>
+  </nav>
+  <button id="theme" aria-label="Toggle dark/light mode">🌙</button>
+  <button id="burger" aria-label="Menu">☰</button>
+</div></header>
 
-  <!-- Navigation Bar -->
-  <header>
-    <nav class="navbar">
-      <a href="#home" class="logo">Siya Dalal</a>
-
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
-
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#resume" class="nav-link">Resume</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-grid"></div>
-
-    <div class="hero-text">
-      <p class="hero-kicker">Hello, I'm</p>
-      <h1>Siya Dalal</h1>
-      <h2 class="hero-role">
-        <span class="role-cursor">&gt;</span>
-        <span id="roleText">Computer Engineering Student</span><span class="blink">|</span>
-      </h2>
-      <p class="hero-intro">
-        I build clean, functional websites and pair that with an eye for design —
-        picking up projects from a rough idea to a finished, working interface.
-      </p>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn primary-btn">View My Projects</a>
-        <a href="#contact" class="btn secondary-btn">Contact Me</a>
-      </div>
+<section id="home" class="hero"><div class="wrap hero-in">
+  <div class="hero-text">
+    <span class="badge"><i></i> Available for Opportunities</span>
+    <p class="hello">Hello, I'm</p>
+    <h1>Siya Dalal</h1>
+    <h2><span id="typed"></span><b class="cursor">|</b></h2>
+    <p class="lead">Web Developer Intern &amp; Computer Engineering student who loves building user-friendly websites and turning rough ideas into finished, working interfaces.</p>
+    <div class="btns">
+      <a href="#projects" class="btn primary">View My Projects</a>
+      <a href="#contact" class="btn">Contact Me</a>
+      <a href="Siya_Dalal_Resume.pdf" class="btn ghost" download>Download Resume</a>
     </div>
+  </div>
+  <div class="avatar">
+    <img src="images/profile.jpg" alt="Siya Dalal" onerror="this.remove()">
+    <span>SD</span>
+  </div>
+</div></section>
 
-    <div class="hero-graphic" aria-hidden="true">
-      <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="160" cy="160" r="118" fill="none" stroke="#FCA311" stroke-width="1.5" stroke-dasharray="4 6"/>
-        <rect x="70" y="110" width="180" height="120" rx="4" fill="#FFFFFF" stroke="#14213D" stroke-width="2.5"/>
-        <line x1="70" y1="140" x2="250" y2="140" stroke="#14213D" stroke-width="2.5"/>
-        <circle cx="86" cy="125" r="4" fill="#FCA311"/>
-        <circle cx="100" cy="125" r="4" fill="#14213D"/>
-        <circle cx="114" cy="125" r="4" fill="#14213D"/>
-        <text x="92" y="175" font-family="Space Grotesk, sans-serif" font-size="34" font-weight="700" fill="#14213D">&lt;/&gt;</text>
-        <path d="M170 195 l14 14 l24 -30" fill="none" stroke="#FCA311" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+<section id="about" class="wrap reveal">
+  <p class="tag">About</p><h2 class="title">Who I am</h2>
+  <div class="about-grid">
+    <div>
+      <p>I'm pursuing a BTech in Computer Engineering at Vidyalankar Institute of Technology, Wadala, after finishing my Diploma in Computer Engineering with 92%.</p>
+      <p>Alongside coding, I've worked in graphic design and digital marketing, which shapes how I build: not just whether it works, but whether it's pleasant to use.</p>
     </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="about">
-    <div class="section-head">
-      <span class="section-tag">About</span>
-      <h2 class="section-title">A bit about me</h2>
+    <div class="stats">
+      <div><b>2+</b>Years of Study</div><div><b>3</b>Projects</div>
+      <div><b>1</b>Internship</div><div><b>6</b>Courses</div>
     </div>
+  </div>
+</section>
 
-    <div class="about-grid">
-      <p class="about-text">
-        I'm currently pursuing a BTech in Computer Engineering at Vidyalankar Institute of
-        Technology, Wadala, after completing my Diploma in Computer Engineering with 92%.
-        Alongside coding, I've worked on graphic design and digital marketing, which shapes
-        how I think about the products I build — not just whether they work, but whether
-        they're pleasant to use. I enjoy picking up new tools and turning ideas into working
-        projects.
-      </p>
+<section id="skills" class="wrap reveal">
+  <p class="tag">Skills</p><h2 class="title">What I work with</h2>
+  <div class="bars">
+    <div class="bar"><span>HTML</span><div><i data-level="90"></i></div><em>90%</em></div>
+    <div class="bar"><span>CSS</span><div><i data-level="85"></i></div><em>85%</em></div>
+    <div class="bar"><span>JavaScript</span><div><i data-level="70"></i></div><em>70%</em></div>
+    <div class="bar"><span>Python</span><div><i data-level="75"></i></div><em>75%</em></div>
+    <div class="bar"><span>Java</span><div><i data-level="65"></i></div><em>65%</em></div>
+    <div class="bar"><span>Git &amp; GitHub</span><div><i data-level="70"></i></div><em>70%</em></div>
+  </div>
+  <div class="chips">
+    <span>C</span><span>C++</span><span>React.js</span><span>SQL</span><span>Figma</span><span>Canva</span>
+    <span>Photoshop (basic)</span><span>WordPress</span><span>VS Code</span>
+  </div>
+</section>
 
-      <div class="timeline">
-        <div class="timeline-item">
-          <span class="timeline-dot"></span>
-          <div>
-            <h3>BTech Computer Engineering</h3>
-            <p class="timeline-meta">Vidyalankar Institute of Technology, Wadala · Pursuing</p>
-            <p class="timeline-detail">10 SGPI in 4th Semester</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-dot"></span>
-          <div>
-            <h3>Diploma in Computer Engineering</h3>
-            <p class="timeline-meta">Vidya Prasarak Mandals Polytechnic, Thane · May 2025</p>
-            <p class="timeline-detail">92.00%</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-dot"></span>
-          <div>
-            <h3>SSC (10th Grade)</h3>
-            <p class="timeline-meta">Fatima High School, Thane · Mar 2022</p>
-            <p class="timeline-detail">90.00%</p>
-          </div>
-        </div>
-      </div>
+<section id="experience" class="wrap reveal">
+  <p class="tag">Experience</p><h2 class="title">Work history</h2>
+  <div class="card">
+    <h3>Graphic Designing &amp; Marketing Intern</h3>
+    <p class="meta">Delta Q · Pune · Jun 2024 – Jul 2024</p>
+    <ul>
+      <li>Designed social media posts and digital marketing materials</li>
+      <li>Created layouts and design assets in Figma</li>
+      <li>Managed content and website updates with WordPress</li>
+      <li>Gained experience in branding and visual storytelling</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects" class="wrap reveal">
+  <p class="tag">Projects</p><h2 class="title">Things I've built</h2>
+  <div class="grid">
+    <article class="card project">
+      <h3>Magic Minds</h3>
+      <p>School website for a Playgroup with an event calendar, student attendance tracking, achievements display and a secure backend.</p>
+      <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+      <a class="btn small" href="https://github.com/SiyaDalal" target="_blank" rel="noopener">GitHub ↗</a>
+    </article>
+    <article class="card project">
+      <h3>Personal Portfolio</h3>
+      <p>This responsive portfolio, built with Git version control (V1 → V2) and deployed using GitHub Pages.</p>
+      <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span></div>
+      <a class="btn small" href="https://github.com/SiyaDalal/SiyaDalal-Portfolio-" target="_blank" rel="noopener">GitHub ↗</a>
+    </article>
+    <article class="card project">
+      <h3>Brand Design Project</h3>
+      <p>Social media creatives and marketing assets made during my design internship, focused on branding and layout.</p>
+      <div class="chips"><span>Figma</span><span>Canva</span><span>Photoshop</span></div>
+      <a class="btn small" href="https://github.com/SiyaDalal" target="_blank" rel="noopener">GitHub ↗</a>
+    </article>
+  </div>
+</section>
+
+<section id="resume" class="wrap reveal">
+  <p class="tag">Resume</p><h2 class="title">Education &amp; learning</h2>
+  <div class="timeline">
+    <div><b>BTech Computer Engineering</b><span>Vidyalankar Institute of Technology, Wadala · Pursuing · 10 SGPI in 4th Sem</span></div>
+    <div><b>Diploma Computer Engineering</b><span>Vidya Prasarak Mandals Polytechnic, Thane · May 2025 · 92.00%</span></div>
+    <div><b>SSC (10th Grade)</b><span>Fatima High School, Thane · Mar 2022 · 90.00%</span></div>
+  </div>
+  <h3 class="sub">Courses &amp; Participation</h3>
+  <div class="chips">
+    <span>Deloitte Technology Job Simulation</span><span>Forage Brand &amp; Design Simulation</span>
+    <span>Graphic Designing in Marketing</span><span>CSS Bootcamp</span><span>React.js Project-based Learning</span><span>Management Course, IITB</span>
+  </div>
+  <h3 class="sub">Languages</h3>
+  <div class="chips"><span>English</span><span>Marathi</span><span>Hindi</span></div>
+  <a href="Siya_Dalal_Resume.pdf" class="btn primary" download>Download Full Resume (PDF)</a>
+</section>
+
+<section id="contact" class="wrap reveal">
+  <p class="tag">Contact</p><h2 class="title">Let's connect</h2>
+  <div class="about-grid">
+    <div class="links">
+      <p>📧 <a href="mailto:dalalsiya1305@gmail.com">dalalsiya1305@gmail.com</a></p>
+      <p>📞 <a href="tel:+917620692636">+91 76206 92636</a></p>
+      <p>💼 <a href="https://www.linkedin.com/in/siya-dalal-74359435a/" target="_blank" rel="noopener">LinkedIn</a></p>
+      <p>🐙 <a href="https://github.com/SiyaDalal" target="_blank" rel="noopener">GitHub</a></p>
+      <p>📍 Maharashtra, India</p>
     </div>
-  </section>
+    <form id="form" class="card">
+      <input id="fname" placeholder="Your name" required>
+      <input id="femail" type="email" placeholder="Your email" required>
+      <textarea id="fmsg" rows="4" placeholder="Your message" required></textarea>
+      <button class="btn primary" type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="skills">
-    <div class="section-head">
-      <span class="section-tag">Skills</span>
-      <h2 class="section-title">What I work with</h2>
-    </div>
-
-    <div class="skills-grid">
-      <div class="skill-chip"><span>HTML</span></div>
-      <div class="skill-chip"><span>CSS</span></div>
-      <div class="skill-chip"><span>JavaScript</span></div>
-      <div class="skill-chip"><span>Python</span></div>
-      <div class="skill-chip"><span>Java</span></div>
-      <div class="skill-chip"><span>Git &amp; GitHub</span></div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <div class="section-head">
-      <span class="section-tag">Projects</span>
-      <h2 class="section-title">Things I've built</h2>
-    </div>
-
-    <div class="project-grid">
-
-      <div class="project-card">
-        <h3>Magic Minds</h3>
-        <p>
-          A school website built for a Playgroup, featuring an event calendar, student
-          attendance tracking, and a display of school achievements, with a secure backend
-          for easy management.
-        </p>
-        <div class="tech-tags">
-          <span>HTML</span><span>CSS</span><span>JavaScript</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3>Personal Portfolio Website</h3>
-        <p>
-          A responsive personal portfolio website — this project — built to showcase my
-          skills, education, and projects, deployed with GitHub Pages.
-        </p>
-        <div class="tech-tags">
-          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h3>Brand Design Simulation Project</h3>
-        <p>
-          Created social media creatives and marketing assets during a design internship,
-          focusing on branding, layout, and visual storytelling.
-        </p>
-        <div class="tech-tags">
-          <span>Figma</span><span>Canva</span><span>Photoshop</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Resume Section -->
-  <section id="resume" class="resume">
-    <div class="section-head">
-      <span class="section-tag">Resume</span>
-      <h2 class="section-title">The short version</h2>
-    </div>
-
-    <div class="resume-grid">
-      <div class="resume-block">
-        <h3>Education</h3>
-        <ul>
-          <li>BTech Computer Engineering (Pursuing) — Vidyalankar Institute of Technology, Wadala</li>
-          <li>Diploma Computer Engineering — Vidya Prasarak Mandals Polytechnic, Thane (92.00%)</li>
-          <li>SSC (10th Grade) — Fatima High School, Thane (90.00%)</li>
-        </ul>
-      </div>
-
-      <div class="resume-block">
-        <h3>Technical Skills</h3>
-        <p>Python, Java, C, C++, HTML, CSS, JavaScript, React.js, SQL, Figma, Canva,
-          Adobe Photoshop (basic), WordPress, GitHub, VS Code</p>
-      </div>
-
-      <div class="resume-block">
-        <h3>Projects</h3>
-        <ul>
-          <li>Magic Minds — School website with event calendar and attendance tracking</li>
-          <li>Personal Portfolio Website — Built with HTML, CSS, JS and deployed on GitHub Pages</li>
-          <li>Brand Design Simulation Project — Marketing creatives and branding assets</li>
-        </ul>
-      </div>
-
-      <div class="resume-block">
-        <h3>Achievements</h3>
-        <ul>
-          <li>10 SGPI in 4th Semester of BTech</li>
-          <li>92.00% in Diploma in Computer Engineering</li>
-          <li>Completed Deloitte Technology Job Simulation</li>
-          <li>Completed Forage Brand and Design Job Simulation</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <div class="section-head">
-      <span class="section-tag">Contact</span>
-      <h2 class="section-title">Let's talk</h2>
-    </div>
-    <p class="contact-sub">Reach out through any of these — I reply fastest over email.</p>
-
-    <div class="contact-links">
-      <a href="mailto:dalalsiya1305@gmail.com" class="contact-link">
-        <svg viewBox="0 0 24 24"><path d="M3 6h18v12H3z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 7l9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
-        <span>dalalsiya1305@gmail.com</span>
-      </a>
-      <a href="https://github.com/SiyaDalal" target="_blank" rel="noopener" class="contact-link">
-        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
-        <span>GitHub</span>
-      </a>
-      <a href="https://www.linkedin.com/in/siya-dalal-74359435a/" target="_blank" rel="noopener" class="contact-link">
-        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.5 8.5h3.9V21H3.5zM10 8.5h3.7v1.7h.05c.52-.94 1.78-1.93 3.67-1.93 3.93 0 4.65 2.5 4.65 5.76V21h-3.9v-6.1c0-1.46-.03-3.33-2.03-3.33-2.04 0-2.35 1.6-2.35 3.23V21H10z"/></svg>
-        <span>LinkedIn</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 Siya Dalal. All rights reserved.</p>
-    <a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
-  </footer>
-
-  <script src="script.js"></script>
+<footer><div class="wrap">
+  <p>© <span id="year">2026</span> Siya Dalal · Built with HTML, CSS &amp; JS · Version 2</p>
+  <p><a href="https://github.com/SiyaDalal" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/siya-dalal-74359435a/" target="_blank" rel="noopener">LinkedIn</a> · <a href="#home">Back to top ↑</a></p>
+</div></footer>
+<script src="script.js"></script>
 </body>
 </html>
