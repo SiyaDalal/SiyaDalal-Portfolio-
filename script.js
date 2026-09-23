@@ -1,82 +1,40 @@
-// Version 1 - JavaScript for interactivity
+// Dark / light mode (remembers choice)
+const root = document.documentElement, themeBtn = document.getElementById('theme');
+function setTheme(t){ root.dataset.theme = t; themeBtn.textContent = t === 'dark' ? '🌙' : '☀️'; localStorage.setItem('theme', t); }
+setTheme(localStorage.getItem('theme') || 'dark');
+themeBtn.onclick = () => setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark');
 
-document.addEventListener("DOMContentLoaded", function () {
+// Mobile menu
+const menu = document.getElementById('menu');
+document.getElementById('burger').onclick = () => menu.classList.toggle('open');
+menu.onclick = () => menu.classList.remove('open');
 
-  // ---------- 1. Typewriter effect in the hero ----------
-  // Cycles through a few roles to show both the dev and design sides
-  const roles = [
-    "Computer Engineering Student",
-    "Web Developer",
-    "Creative Designer"
-  ];
-  const roleTextEl = document.getElementById("roleText");
+// Typing effect in hero
+const words = ['Computer Engineering Student', 'Web Developer Intern', 'UI / Graphic Designer'];
+let w = 0, c = 0, del = false;
+function type(){
+  const word = words[w];
+  document.getElementById('typed').textContent = word.slice(0, c);
+  if(!del && c === word.length){ del = true; return setTimeout(type, 1400); }
+  if(del && c === 0){ del = false; w = (w + 1) % words.length; }
+  c += del ? -1 : 1;
+  setTimeout(type, del ? 40 : 80);
+}
+type();
 
-  let roleIndex = 0;
-  let charIndex = roles[0].length;
-  let isDeleting = false;
-
-  function typeLoop() {
-    const currentRole = roles[roleIndex];
-
-    if (isDeleting) {
-      charIndex--;
-    } else {
-      charIndex++;
-    }
-
-    roleTextEl.textContent = currentRole.substring(0, charIndex);
-
-    let delay = isDeleting ? 40 : 80;
-
-    if (!isDeleting && charIndex === currentRole.length) {
-      delay = 1400; // pause at full word
-      isDeleting = true;
-    } else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      roleIndex = (roleIndex + 1) % roles.length;
-      delay = 300;
-    }
-
-    setTimeout(typeLoop, delay);
+// Reveal sections + fill skill bars on scroll
+const io = new IntersectionObserver(entries => entries.forEach(e => {
+  if(e.isIntersecting){
+    e.target.classList.add('show');
+    e.target.querySelectorAll('[data-level]').forEach(b => b.style.width = b.dataset.level + '%');
   }
+}), { threshold: .15 });
+document.querySelectorAll('.reveal').forEach(s => io.observe(s));
 
-  setTimeout(typeLoop, 1400); // wait before first delete/retype cycle
-
-  // ---------- 2. Highlight active nav link while scrolling ----------
-  const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".nav-link");
-
-  function setActiveLink() {
-    let currentId = "";
-    const scrollPos = window.scrollY + 120;
-
-    sections.forEach((section) => {
-      if (scrollPos >= section.offsetTop) {
-        currentId = section.getAttribute("id");
-      }
-    });
-
-    navLinks.forEach((link) => {
-      link.classList.toggle("active", link.getAttribute("href") === "#" + currentId);
-    });
-  }
-
-  window.addEventListener("scroll", setActiveLink);
-  setActiveLink();
-
-  // ---------- 3. Mobile menu toggle ----------
-  const menuToggle = document.getElementById("menuToggle");
-  const navLinksList = document.getElementById("navLinks");
-
-  menuToggle.addEventListener("click", function () {
-    navLinksList.classList.toggle("open");
-  });
-
-  // Close the mobile menu after tapping a link
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      navLinksList.classList.remove("open");
-    });
-  });
-
-});
+// Contact form opens the visitor's email app (no backend needed)
+document.getElementById('form').onsubmit = e => {
+  e.preventDefault();
+  const n = fname.value, m = fmsg.value + '\n\nFrom: ' + n + ' (' + femail.value + ')';
+  location.href = 'mailto:dalalsiya1305@gmail.com?subject=' + encodeURIComponent('Portfolio message from ' + n) + '&body=' + encodeURIComponent(m);
+};
+document.getElementById('year').textContent = new Date().getFullYear();
