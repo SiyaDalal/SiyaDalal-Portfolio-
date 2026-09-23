@@ -1,35 +1,11 @@
-# Siya Dalal — Personal Portfolio Website
+# Siya Dalal – Personal Portfolio
 
-A personal portfolio website built with HTML, CSS, and JavaScript, showcasing my
-education, skills, projects, resume, and contact information. Deployed using
-GitHub Pages.
+Portfolio built with HTML, CSS and JavaScript, deployed with GitHub Pages.
 
-## 🔗 Live Site
-https://your-username.github.io/
+**Live:** https://siyadalal.github.io/SiyaDalal-Portfolio-/
 
-## 📁 Files
-- `index.html` — Main page structure
-- `style.css` — Styling and layout
-- `script.js` — Basic interactivity
-- `README.md` — Project documentation
+## Version history
+- **Version 1** – Initial portfolio (nav, hero, about, skills, projects, resume, contact)
+- **Version 2** – Profile photo, typing hero, skill progress bars, dark/light toggle, project GitHub buttons, experience/courses/languages, scroll animations, mobile menu, resume download, updated footer
 
-## 🛠️ Built With
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
-
-## 📌 Sections
-- Home
-- About
-- Skills
-- Projects
-- Resume
-- Contact
-
-## 📝 Version History
-- **Version 1** — Initial portfolio website with all core sections
-- **Version 2** — Improved design with dark/light mode, animations, and enhanced UI
-
-## 👩‍💻 Author
-**Siya Dalal**
-Email: dalalsiya1305@gmail.com
+Photo goes in `images/profile.jpg`.
